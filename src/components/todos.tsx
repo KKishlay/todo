@@ -23,11 +23,11 @@ const Todos = () => {
           <li key={todo.id}>
             <input
               type="checkbox"
-              id={`todo-{todo.id}`}
+              id={`todo-${todo.id}`}
               checked={todo.completed}
               onChange={() => toggletodoAsCompleted(todo.id)}
             />
-            <label htmlFor={`todo-{todo.id}`}>{todo.task}</label>
+            <label htmlFor={`todo-${todo.id}`}>{todo.task}</label>
             {todo.completed && (
               <button type="button" onClick={() => handleDeleteTodo(todo.id)}>
                 Delete
